@@ -1,0 +1,65 @@
+
+html
+{
+  font-size : 62.5%;
+}
+
+body
+{
+  font-size   : 1.6rem;
+  color       : #000000;
+  display     : flex;
+  flex-flow   : column nowrap;
+  align-items : stretch;
+}
+
+header
+{
+  border-bottom : solid 0.2rem #000000;
+}
+
+nav
+{
+  text-align      : right;
+  font-size       : 1.8rem;
+  font-weight     : bold;
+  color           : #000000;
+  text-decoration : none;
+  text-transform  : uppercase;
+}
+
+footer
+{
+  margin-top : 3rem;
+  padding    : 0px 0px 1.19999rem 1.19999rem;
+  border-top : solid 0.2rem #000000;
+  font-size  : 1.19999rem;
+  color      : #050505;
+}
+
+h1
+{
+  font-size : 2.39999rem;
+}
+
+h2
+{
+  font-size : 2rem;
+}
+
+article > .header
+{
+  font-size  : 1.39999rem;
+  font-style : italic;
+  color      : #050505;
+}
+
+div > .logo > a
+{
+  font-weight     : bold;
+  color           : #000000;
+  text-decoration : none;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */
