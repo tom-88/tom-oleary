@@ -65,12 +65,43 @@ basic = do
         color $ rgb 5 5 5
 
     div |>".logo" |> a ? do
-    fontWeight bold
-    color $ rgb 0 0 0
-    textDecoration none 
+        fontWeight bold
+        color $ rgb 0 0 0
+        textDecoration none 
     
-    container ? do
+    ".container" ? do
         position relative
         width $ pct 50
 
+    ".image" ? do
+        display block   
+        width $ pct 100
+        height auto
+
+    ".overlay" ? do
+        position absolute  
+        bottom $ pct 100
+        left $ px 0
+        right $ px 0
+        backgroundColor (rgb 255 255 255)
+        overflow hidden
+        width $ pct 100
+        height $ px 0
+        transition "all" (sec 0.5) ease (sec 0)
+
+    ".container" # hover |> ".overlay" ? do
+        bottom $ px 0
+        height $ pct 100
+
+    ".text" ? do
+        whiteSpace nowrap
+        color (rgb 0 0 0)
+        fontSize $ px 20
+        position absolute
+        overflow hidden
+        top $ pct 50
+        left $ pct 50
+        transform (translate (pct (0-50)) (pct (0-50)))
+        
+    
     
