@@ -7,13 +7,16 @@
 
 module Main where
 
-import Prelude hiding (div, rem)
+import Prelude hiding (div, rem, all)
 
 import Clay
 
 import qualified Clay.Media as Media
 
 import qualified Clay.Flexbox as CF
+
+import Data.Text (Text)
+
 
 main :: IO()
 
@@ -29,7 +32,8 @@ basic = do
     body ? do
         fontSize $ rem 1.6
         color $ rgb 0 0 0 
-        
+        centered
+       
         -- Display
         display flex
         flexFlow column CF.nowrap
@@ -85,7 +89,7 @@ basic = do
         right $ px 0
         backgroundColor (rgb 255 255 255)
         overflow hidden
-        width $ pct 100
+        width $ pct 200
         height $ px 0
         transition "all" (sec 0.5) ease (sec 0)
 
@@ -103,5 +107,30 @@ basic = do
         left $ pct 50
         transform (translate (pct (0-50)) (pct (0-50)))
         
-    
-    
+--------------------------------------------------------------------------------
+centered :: Css
+centered =
+  do box
+     wide $
+       do width       pageWidth
+          marginLeft  auto
+          marginRight auto
+     narrow $
+       do width       (pct 100)
+
+
+-------------------------------------------------------------------------------
+
+box :: Css
+box = boxSizing borderBox
+
+pageWidth :: (Size LengthUnit)
+pageWidth = px 750
+
+narrow :: Css -> Css
+narrow = query all [Media.maxWidth pageWidth]
+
+wide :: Css -> Css
+wide = query all [Media.minWidth pageWidth]
+
+
