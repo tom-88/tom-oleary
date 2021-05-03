@@ -18,17 +18,17 @@ body
   align-items        : stretch;
 }
 
-@media all and (min-width: 750px)
+@media all and (min-width: 1500px)
 {
 body
 {
-  width        : 750px;
+  width        : 1500px;
   margin-left  : auto;
   margin-right : auto;
 }
 
 }
-@media all and (max-width: 750px)
+@media all and (max-width: 1500px)
 {
 body
 {
@@ -36,11 +36,6 @@ body
 }
 
 }
-header
-{
-  border-bottom : solid 0.2rem #000000;
-}
-
 nav
 {
   text-align      : right;
@@ -51,18 +46,10 @@ nav
   text-transform  : uppercase;
 }
 
-footer
-{
-  margin-top : 3rem;
-  padding    : 0px 0px 1.19999rem 1.19999rem;
-  border-top : solid 0.2rem #000000;
-  font-size  : 1.19999rem;
-  color      : #050505;
-}
-
 h1
 {
-  font-size : 2.39999rem;
+  font-size  : 2.39999rem;
+  text-align : center;
 }
 
 h2
@@ -77,10 +64,11 @@ article > .header
   color      : #050505;
 }
 
-div > .logo > a
+div > .logo
 {
+  font-size       : 500rem;
   font-weight     : bold;
-  color           : #000000;
+  color           : #040100;
   text-decoration : none;
 }
 
@@ -92,9 +80,9 @@ div > .logo > a
 
 .image
 {
-  display : block;
-  width   : 100%;
-  height  : auto;
+  display      : block;
+  margin-left  : auto;
+  margin-right : auto;
 }
 
 .overlay

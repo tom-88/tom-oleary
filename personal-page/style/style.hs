@@ -38,10 +38,7 @@ basic = do
         display flex
         flexFlow column CF.nowrap
         alignItems stretch
-
-    header ? do
-        borderBottom solid (rem 0.2) (rgb 0 0 0)
-
+    
     nav ? do
         textAlign (alignSide sideRight)
         fontSize $ rem 1.8
@@ -50,15 +47,9 @@ basic = do
         textDecoration none
         textTransform uppercase
 
-    footer ? do
-        marginTop $ rem 3
-        padding 0 0 (rem 1.2) (rem 1.2)
-        borderTop solid (rem 0.2) (rgb 0 0 0)
-        fontSize $ rem 1.2
-        color $ rgb 5 5 5
-
     h1 ? do
         fontSize $ rem 2.4
+        textAlign center
     
     h2 ? do
         fontSize $ rem 2
@@ -68,9 +59,10 @@ basic = do
         fontStyle italic
         color $ rgb 5 5 5
 
-    div |>".logo" |> a ? do
+    div |> ".logo" ? do
+        fontSize $ rem 500
         fontWeight bold
-        color $ rgb 0 0 0
+        color $ rgb 4 1 0
         textDecoration none 
     
     ".container" ? do
@@ -79,8 +71,8 @@ basic = do
 
     ".image" ? do
         display block   
-        width $ pct 100
-        height auto
+        marginLeft auto;
+        marginRight auto
 
     ".overlay" ? do
         position absolute  
@@ -125,7 +117,7 @@ box :: Css
 box = boxSizing borderBox
 
 pageWidth :: (Size LengthUnit)
-pageWidth = px 750
+pageWidth = px 1500
 
 narrow :: Css -> Css
 narrow = query all [Media.maxWidth pageWidth]

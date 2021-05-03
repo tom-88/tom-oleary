@@ -10,12 +10,12 @@ main = hakyll $ do
     forM_ ["images/*", "assets/*"] $ \x -> match x $ do
         route   idRoute
         compile copyFileCompiler
-
-    match "style/*.hs" $ do
+    
+    match "style/style.hs" $ do
         route $ setExtension "css"
         compile (getResourceString >>= withItemBody (unixFilter "runghc" []))
 
-    match (fromList ["about.rst", "contact.markdown", "projects.markdown"]) $ do
+    match (fromList ["about.markdown", "contact.markdown", "projects.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -53,7 +53,7 @@ main = hakyll $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
