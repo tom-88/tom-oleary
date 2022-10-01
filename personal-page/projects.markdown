@@ -1,3 +1,4 @@
+<!--
 ---
 title: Projects
 layout: default
@@ -25,4 +26,6 @@ layout: default
 - book summaries uploaded online and nicely formatted
 - tutorials
 - recommendations : music / books / keep a youtube playlist?
+-->
+![Under construction!](images/condude.gif)
 
