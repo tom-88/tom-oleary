@@ -10,10 +10,9 @@ config = defaultConfiguration
   { destinationDirectory = "docs"
   }
 
-
-
 main :: IO ()
-main = hakyll $ do
+
+main = hakyllWith config $ do
     forM_ ["images/*", "assets/*"] $ \x -> match x $ do
         route   idRoute
         compile copyFileCompiler

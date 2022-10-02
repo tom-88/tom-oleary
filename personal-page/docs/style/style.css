@@ -1,0 +1,128 @@
+
+html
+{
+  font-size : 62.5%;
+}
+
+body
+{
+  font-size          : 1.6rem;
+  color              : #000000;
+  -webkit-box-sizing : border-box;
+  -moz-box-sizing    : border-box;
+  -ms-box-sizing     : border-box;
+  -o-box-sizing      : border-box;
+  box-sizing         : border-box;
+  display            : flex;
+  flex-flow          : column nowrap;
+  align-items        : stretch;
+}
+
+@media all and (min-width: 1500px)
+{
+body
+{
+  width        : 1500px;
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+}
+@media all and (max-width: 1500px)
+{
+body
+{
+  width : 100%;
+}
+
+}
+nav
+{
+  text-align      : right;
+  font-size       : 1.8rem;
+  font-weight     : bold;
+  color           : #000000;
+  text-decoration : none;
+  text-transform  : uppercase;
+}
+
+h1
+{
+  font-size  : 2.39999rem;
+  text-align : center;
+}
+
+h2
+{
+  font-size : 2rem;
+}
+
+article > .header
+{
+  font-size  : 1.39999rem;
+  font-style : italic;
+  color      : #050505;
+}
+
+div > .logo
+{
+  font-size       : 500rem;
+  font-weight     : bold;
+  color           : #040100;
+  text-decoration : none;
+}
+
+.container
+{
+  position : relative;
+  width    : 50%;
+}
+
+.image
+{
+  display      : block;
+  margin-left  : auto;
+  margin-right : auto;
+}
+
+.overlay
+{
+  position           : absolute;
+  bottom             : 100%;
+  left               : 0px;
+  right              : 0px;
+  background-color   : #ffffff;
+  overflow           : hidden;
+  width              : 200%;
+  height             : 0px;
+  -webkit-transition : all 0.5s ease 0.0s;
+  -moz-transition    : all 0.5s ease 0.0s;
+  -ms-transition     : all 0.5s ease 0.0s;
+  -o-transition      : all 0.5s ease 0.0s;
+  transition         : all 0.5s ease 0.0s;
+}
+
+.container:hover > .overlay
+{
+  bottom : 0px;
+  height : 100%;
+}
+
+.text
+{
+  white-space       : nowrap;
+  color             : #000000;
+  font-size         : 20px;
+  position          : absolute;
+  overflow          : hidden;
+  top               : 50%;
+  left              : 50%;
+  -webkit-transform : translate(-50%,-50%);
+  -moz-transform    : translate(-50%,-50%);
+  -ms-transform     : translate(-50%,-50%);
+  -o-transform      : translate(-50%,-50%);
+  transform         : translate(-50%,-50%);
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */
