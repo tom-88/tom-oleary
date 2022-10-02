@@ -5,6 +5,13 @@ import           Hakyll
 import           Control.Monad (forM_)
 
 --------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+  { destinationDirectory = "docs"
+  }
+
+
+
 main :: IO ()
 main = hakyll $ do
     forM_ ["images/*", "assets/*"] $ \x -> match x $ do
