@@ -1,31 +1,23 @@
-<!--
 ---
 title: Projects
 layout: default
 ---
 
 ### Research
-- PhD output so far
 - Master's thesis : [Error suppression for continuous time quantum computing (PDF)](/assets/err_supp_cont_time_qc.pdf) 
 
 ### Programming
-- IBM Extreme Blue 2019 
-- title grabber on github
-- style transfer when done
+- <a href="https://research.ibm.com/blog/2022-quantum-open-science-prize">IBM Quantum Awards<a>
 
 
 ### Music
-- Piano recordings / pictures
-- royalty free / sfx
-- other online music
+-<a href="https://www.youtube.com/watch?v=qBsREfEhjrM"> A performance of Debussy's Sarabande<a>
 
 ### Web design
-- link to self
+- <a href="https://tom-88.github.io/tom-oleary/">It's all downhill from here<a>
 
-### Writing
-- book summaries uploaded online and nicely formatted
-- tutorials
-- recommendations : music / books / keep a youtube playlist?
--->
+<!--
 ![Under construction!](images/condude.gif)
+-->
+
 
